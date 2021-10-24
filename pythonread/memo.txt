@@ -1,0 +1,21 @@
+output from mkres-fittingdE.awk: 
+
+
+## Energy is converted based on PHITS Energy calibration equation
+E = 3.1816 * $1 
+
+# Energy based sigma
+	s = sqrt(0.0803375 * E0)
+	if($1 > 50){s = sqrt(-10.397 + 0.0803375*E0)} 
+
+
+I[i] = 3.1816 * i
+			
+			if ( ((E0-dx) < I[i]) && (I[i] < (E0+dx)) ) 
+			{
+				y = A/sqrt(2 * pi* s^2) * exp (- ((I[i]-E0)^2)/ (2 * s^2))
+				if (i>_0)
+				{
+					Y[i] += y
+				}
+			}

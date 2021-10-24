@@ -1,0 +1,12 @@
+loss to photofis values are taken from
+
+	3nuclides - renew2.xlsx
+	
+	Sheet: 6-7-11 
+
+
+Photofission reaction rate values are taken from 
+
+	raw data renew.xlsx
+
+	Sheet: まとめ
